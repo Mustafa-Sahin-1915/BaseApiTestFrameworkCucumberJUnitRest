@@ -14,10 +14,9 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt" ,
              },
-
         features = "./src/test/resources/features",//path od features folder
         glue = {"hooks", "stepdefinitions"},//path of the step definitions folder
-        tags = "@PostRequestTest",
+        tags = "@PostUsersTestReqresApi",
         dryRun = false
 )
 

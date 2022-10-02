@@ -9,7 +9,10 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
 
 public class PostRequestTestStepDefs {
     protected RequestSpecification spec;
@@ -32,7 +35,7 @@ public class PostRequestTestStepDefs {
     public void as_a_user_send_post_request_to_generate_a_client_library_for(String language) {
         //spec.pathParam("language", language );
         //body should be ready
-
+/*
    String payload="{"+
  "\"spec\":{}," +
   "\"options\": {"+
@@ -53,6 +56,8 @@ public class PostRequestTestStepDefs {
     "\"description\": \"string\""+
   "}"+
 "}";
+   */
+        String payload="{ \"swaggerUrl\":\"http://petstore.swagger.io/v2/swagger.json\"}";
         System.out.println(payload);
         response = given()
                 .spec(spec)
